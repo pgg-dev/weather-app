@@ -62,7 +62,7 @@ export default function App() {
                 <View key={index} style={styles.day}>
                   <View style={{ width: "100%", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <Text style={styles.temp}>{parseFloat(day.temp.day).toFixed(1)}</Text>
-                    <Fontisto name={icons[day.weather[0].main]} size={68} color="black" />
+                    <Fontisto name={icons[day.weather[0].main]} size={68} color="white" />
                   </View>
                   <Text style={styles.description}>{day.weather[0].main}</Text>
                   <Text style={styles.tinyText}>{day.weather[0].description}</Text>
@@ -85,22 +85,31 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   cityName: {
-    fontSize: 68,
+    fontSize: 58,
     fontWeight: "500",
+    color: "white",
   },
-  weather: {},
   day: {
     width: SCREEN_WIDTH,
-    alignItems: "center",
+    alignItems: "flex-start",
+    paddingHorizontal: 20
   },
   temp: {
     marginTop: 50,
-    fontSize: 178,
+    fontSize: 100,
+    color: "white",
+    fontWeight: "600"
   },
   description: {
-    fontSize: 60,
+    marginTop: -10,
+    fontSize: 30,
+    color: "white",
+    fontWeight: "500"
   },
   tinyText: {
-    fontSize: 20
+    marginTop: -5,
+    fontSize: 25,
+    color: "white",
+    fontWeight: "500"
   }
 });
